@@ -46,6 +46,7 @@ OV_FEED_d1      = chr(0x94)
 OV_RAPID_100    = chr(0x95)
 OV_RAPID_50     = chr(0x96)
 OV_RAPID_25     = chr(0x97)
+OV_RAPID_75     = chr(0x98) #my
 
 OV_SPINDLE_100  = chr(0x99)
 OV_SPINDLE_i10  = chr(0x9A)
@@ -884,7 +885,7 @@ class Sender:
 					elif target == 100:
 						self.serial.write(OV_RAPID_100)
 					elif target == 75:
-						self.serial.write(OV_RAPID_50)	# FIXME
+						self.serial.write(OV_RAPID_75)	# FIXME
 					elif target == 50:
 						self.serial.write(OV_RAPID_50)
 					elif target == 25:
